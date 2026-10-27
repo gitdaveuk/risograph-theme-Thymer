@@ -1,0 +1,298 @@
+/* ============================================================
+   LIGHT THEME: RISOGRAPH
+   A two-ink print on cream stock: deep blue ink for text,
+   hot pink for everything that matters. Headings get a slight
+   pink "misregistration" offset, like the second drum didn't
+   quite line up with the first.
+   ============================================================ */
+html[data-theme="basic-light-risograph"] {
+    color-scheme: light;
+
+    /* --- headings: blue ink, pink ghost layer --- */
+    .heading-h1,
+    .heading-h2,
+    .heading-h3,
+    .heading-h4,
+    .heading-h5,
+    .heading-h6 {
+        color: #17235e;
+        text-shadow: 1px 1px 0 rgba(255,72,176,.28);
+    }
+
+    /* --- surfaces (cool bluish-white stock, no warm tones) --- */
+    --color-bg-950: #f6f7fe;
+    --color-bg-900: #fcfcff;
+    --color-bg-800: #f3f4fd;
+    --color-bg-700: #eceefa;
+    --color-bg-600: #e4e7f6;
+    --color-bg-500: #d9ddf1;
+    --color-bg-400: #c6cbe8;
+    --color-bg-300: #a7aed6;
+
+    /* --- primary / accent (pink ink, deep enough for white text) --- */
+    --color-primary-300: #f6b3cd;
+    --color-primary-400: #e8508a;
+    --color-primary-500: #d6246a;
+    --color-primary-600: #b01a55;
+    --color-primary-700: #8c1244;
+    --color-primary-text-100: #ffffff;
+
+    /* --- text (blue ink) --- */
+    --color-text-50:  #17235e;
+    --color-text-100: #1f2a66;
+    --color-text-400: #46508a;
+    --color-text-700: #5d6595;
+
+    /* --- caret --- */
+    --ed-caret-self-fg: var(--color-primary-500);
+    --ed-caret-self-background: color-mix(in srgb, currentColor 20%, transparent);
+    --ed-caret-self-border-width: 0px;
+    --ed-caret-self-box-shadow: 0 0 2px currentColor;
+    --ed-caret-self-radius: 2px;
+
+    /* --- chrome --- */
+    --titlebar-bg-color: var(--color-bg-950);
+    --panel-bg-color: var(--color-bg-900);
+    --side-bg-color: var(--color-bg-800);
+    --status-bg-color: var(--color-bg-700);
+    --divider-color: rgba(23,35,94,.08);
+    --input-bg-color: #ffffff;
+    --input-border-focus: 1px solid var(--color-primary-500);
+    --input-border-shadow:
+        0 2px 8px color-mix(in srgb, var(--color-primary-500) 20%, transparent);
+
+    --cmdpal-bg-color: var(--color-bg-800);
+    --cmdpal-selected-bg-color: #d6246a;
+    --cmdpal-selected-fg-color: #ffffff;
+
+    --text-ok: #1c7a55;
+    --text-warning: #7a3fb0;
+    --text-error: #c0262d;
+
+    /* --- checkboxes --- */
+    --ed-check-div-border: #3a4aa8;
+    --ed-check-div-hover-bg: #f6d9e4;
+    --ed-check-div-hover-border: #d6246a;
+    --ed-check-done-bg: #d6246a;
+    --ed-check-done-fg: #ffffff;
+    --ed-check-done-border: #b01a55;
+    --ed-check-started-fg: #d6246a;
+    --ed-check-blocked-fg: #0b5fb0;
+    --ed-check-blocked-border: #0b5fb0;
+
+    .listitem.listitem-task.state-done .lineitem-text {
+        color: #9aa0c0 !important;
+        text-decoration-color: #d6246a !important;
+    }
+
+    /* --- inline references --- */
+    --ed-hashtag-bg: rgba(214,36,106,.12);
+    --ed-hashtag-color: #a31654;
+    --ed-mention-bg: #dce4f5;
+    --ed-mention-color: #17399a;
+    --ed-mention-hover-bg: #c9d6f0;
+    --ed-mention-hover-color: #0f2a7a;
+    --ed-datetime-bg: #f8d9e4;
+    --ed-datetime-color: #8c1244;
+    --ed-inlineref-fg: #0b5fb0;
+    --ed-inlineref-icon-fg: #0b5fb0;
+    --ed-inlineref-underline: #0b5fb0;
+    --ed-ref-fg: #0b5fb0;
+    --ed-ref-icon-fg: #0b5fb0;
+    --ed-ref-underline: #0b5fb0;
+    --ed-link-color: #0b5fb0;
+    --ed-link-hover-color: #d6246a;
+
+    /* --- logo: offset print shadow instead of glow --- */
+    --logo-color: #d6246a;
+    --logo-glow-shadow:
+        0 0 15px rgba(214,36,106,.2), 0 0 30px rgba(214,36,106,.1), 0 0 45px rgba(214,36,106,.05);
+    --shadow-primary-glow:
+        0 0 15px rgba(214,36,106,.35), 0 0 30px rgba(214,36,106,.2), 0 0 45px rgba(214,36,106,.1);
+
+    ::selection {
+        background: rgba(255,72,176,.28);
+    }
+
+    .panel,
+    .sidebar {
+        box-shadow: inset 0 0 0 1px rgba(23,35,94,.07);
+    }
+
+    button,
+    .button,
+    .listitem {
+        transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+    }
+
+    button:hover,
+    .button:hover {
+        filter: brightness(.97);
+    }
+
+    a { color: #0b5fb0; }
+    a:hover { color: #d6246a; }
+
+    code {
+        background: rgba(11,95,176,.09);
+        color: #0b4f94;
+        border-radius: 4px;
+    }
+
+    blockquote {
+        border-left: 3px solid #d6246a;
+        color: #5a6396;
+    }
+
+    hr {
+        border-color: rgba(23,35,94,.2);
+    }
+}
+
+
+/* ============================================================
+   DARK THEME: RISOGRAPH NIGHT
+   The same print run on dark blue stock, with fluorescent pink
+   and yellow inks. Cream text, a pink ghost under the headings,
+   yellow for links so they never blur into the accent.
+   ============================================================ */
+html[data-theme="basic-dark-risograph"] {
+    color-scheme: dark;
+
+    /* --- headings --- */
+    .heading-h1,
+    .heading-h2,
+    .heading-h3,
+    .heading-h4,
+    .heading-h5,
+    .heading-h6 {
+        color: #fff3d6;
+        text-shadow: 2px 1px 0 rgba(255,90,165,.45);
+    }
+
+    /* --- surfaces (blue-black stock) --- */
+    --color-bg-950: #0a0d1f;
+    --color-bg-900: #0f1330;
+    --color-bg-800: #151a3d;
+    --color-bg-700: #1e2550;
+    --color-bg-600: #2c3566;
+    --color-bg-500: #3a4580;
+    --color-bg-400: #4d5a9c;
+    --color-bg-300: #6a76b4;
+
+    /* --- primary / accent (fluorescent pink) --- */
+    --color-primary-400: #ff5aa5;
+    --color-primary-500: #ff5aa5;
+    --color-primary-600: #e0407f;
+    --color-primary-700: #b82e66;
+    --color-primary-text-100: #1a0a14;
+
+    /* --- text (cream) --- */
+    --color-text-50:  #f1e9d2;
+    --color-text-100: #e0d8c0;
+    --color-text-400: #b5b5c8;
+    --color-text-700: #8085ab;
+
+    /* --- caret --- */
+    --ed-caret-self-fg: var(--color-primary-500);
+    --ed-caret-self-background: color-mix(in srgb, currentColor 25%, transparent);
+    --ed-caret-self-border-width: 0px;
+    --ed-caret-self-box-shadow: 0 0 2px currentColor;
+    --ed-caret-self-radius: 2px;
+
+    /* --- chrome --- */
+    --titlebar-bg-color: var(--color-bg-950);
+    --panel-bg-color: var(--color-bg-900);
+    --side-bg-color: var(--color-bg-800);
+    --status-bg-color: var(--color-bg-800);
+    --divider-color: rgba(241,233,210,.08);
+    --input-bg-color: var(--color-bg-950);
+    --input-border-focus: 2px solid var(--color-primary-500);
+    --input-border-shadow:
+        3px 3px 0 color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+
+    --cmdpal-bg-color: var(--color-bg-800);
+    --cmdpal-selected-bg-color: #e0407f;
+    --cmdpal-selected-fg-color: #1a0a14;
+
+    --text-ok: #6fdc9f;
+    --text-warning: #ffd23f;
+    --text-error: #ff7a7a;
+
+    /* --- checkboxes --- */
+    --ed-check-div-border: #f1e9d2;
+    --ed-check-div-hover-bg: #2a1f4a;
+    --ed-check-div-hover-border: #ff5aa5;
+    --ed-check-done-bg: #ff5aa5;
+    --ed-check-done-fg: #1a0a14;
+    --ed-check-done-border: #e0407f;
+    --ed-check-started-fg: #ff5aa5;
+    --ed-check-blocked-fg: #8fb4ff;
+    --ed-check-blocked-border: #8fb4ff;
+
+    .listitem.listitem-task.state-done .lineitem-text {
+        color: #5b6190 !important;
+        text-decoration-color: #ff5aa5 !important;
+    }
+
+    /* --- inline references --- */
+    --ed-hashtag-bg: rgba(255,90,165,.15);
+    --ed-hashtag-color: #ff8cc0;
+    --ed-mention-bg: #1e2550;
+    --ed-mention-color: #8fb4ff;
+    --ed-mention-hover-bg: #28316a;
+    --ed-mention-hover-color: #bcd2ff;
+    --ed-datetime-bg: #2a1f4a;
+    --ed-datetime-color: #ffb0d4;
+    --ed-inlineref-fg: #ffd23f;
+    --ed-inlineref-icon-fg: #ffd23f;
+    --ed-inlineref-underline: #ffd23f;
+    --ed-ref-fg: #ffd23f;
+    --ed-ref-icon-fg: #ffd23f;
+    --ed-ref-underline: #ffd23f;
+    --ed-link-color: #ffd23f;
+    --ed-link-hover-color: #ffe58a;
+
+    /* --- logo: offset print shadow --- */
+    --logo-color: #ff5aa5;
+    --logo-glow-shadow: 2px 2px 0 rgba(255,210,63,.45);
+    --shadow-primary-glow: 3px 3px 0 rgba(255,210,63,.35);
+
+    ::selection {
+        background: rgba(255,90,165,.32);
+    }
+
+    .panel,
+    .sidebar {
+        box-shadow: inset 0 0 0 1px rgba(255,90,165,.06);
+    }
+
+    button,
+    .button,
+    .listitem {
+        transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+    }
+
+    button:hover,
+    .button:hover {
+        filter: brightness(1.08);
+    }
+
+    a { color: #ffd23f; }
+    a:hover { color: #ffe58a; }
+
+    code {
+        background: rgba(255,90,165,.13);
+        color: #ff8cc0;
+        border-radius: 4px;
+    }
+
+    blockquote {
+        border-left: 3px solid #ff5aa5;
+        color: #9a9fc6;
+    }
+
+    hr {
+        border-color: rgba(241,233,210,.5);
+    }
+}
